@@ -1,0 +1,255 @@
+Concepto de juego:
+Juego por turnos. Los alvariños tienen Ataque, vida, defensa, Magia, Velocidad, Maná. 
+Ataque: Determina el daño que se hace con los ataques físicos y con algunas habilidades.
+Vida: Determina la vida inicial y como de fuertes son algunas habilidades 
+Defensa física: Determina cuanto daño se bloquea al usar la acción defenderse proveniente de fuentes físicas y como de eficaz será la defensa
+Defensa mágica: Determina cuanto daño se bloquea al usar la acción defenderse proveniente de fuentes mágicas y como de eficaz será la defensa
+Velocidad: Determina cuan probable es que el Alvariño actúe primero
+Magia: Determina como de fuertes son la mayoría de habilidades especiales.
+Maná: Cada Alvariño empieza con una cantidad determinada que suele ser 0. Cada turno incrementa en 1
+Maná máximo: Capacidad máxima
+Cansancio: Cansancio empieza en 5 y no tiene límite. Siempre que Alvariño ataca o recibe daño disminuye en 1 su cansancio. 
+Siempre que Alvariño recibe daño pero se defiende de forma eficaz (defiende primero) ni gana ni pierde cansancio. 
+Siempre que Alvariño no ataca en un turno y tampoco recibe daño obtiene +1 en cansancio. 
+Siempre que el cansancio vale 0, pasará a valer 1 al final del turno, después de todas las acciones de los jugadores, sin importar qué. 
+Los jugadores deciden cada turno si:
+Atacar, bloquear, Canalizar maná extra, Usar una habiblidad
+Atacar: Inflige (Daño) al oponente Valdrá entre 1 y 20 por defecto
+Bloquear: Mitiga (Defensa) o (Defensa mágica) del daño que se fuese a recibir este turno del tipo elegido
+Canalizar maná: Gana 2 maná extra. 
+Canalizar energía: Gana 2 a cansancio.
+Usar una habilidad: Gasta maná para realizar una acción especial
+Además, estas opciones se verán modificadas si el jugador actúa después o recibió daño:
+Atacar: Inflige (Daño/2) al oponente si el jugador recibió daño (ese turno el cansancio disminuye en 2)
+Bloquear: Mitiga (Defensa/2) o (Defensa mágica/2) del daño que se fuese a recibir este turno del tipo elegido si el jugador actúa después
+Canalizar maná: Gana 1 maná extra si el jugador recibió daño
+Canalizar energía: No sufre ninguna penalización
+Usar una habilidad: La habilidad tiene un %de fallar igual a (10-coste de maná) y en caso de fallo existe un (coste de manáx5)% de probabilidad de perder el maná invertido.
+Concepto o idea de Alvariños:
+
+Alvariños primigenios: 
+Alvariño base: 
+El Alvariño base es como Alvariño, tiene habilidades defensivas como escudos, una decente cantidad de vida y algo menos de ataque.
+
+Estadísticas base: 
+Ataque: 12
+Magia: 0
+Vida: 180
+Defensa física: 14 
+Defensa mágica: 14
+Velocidad: 12
+Maná: 3
+Maná máximo: 5
+Cansancio: 3
+
+Habilidades: 
+Constancia ofensiva: Aumenta en 1 su ataque. Puede usarse hasta 3 veces Cuesta 3 de maná
+Constancia defensiva: Aumenta en 1 su defensa física y mágica. Puede usarse hasta 3 veces Cuesta 5 de maná
+Constancia vital: Aumenta en 10 sus puntos de vida. Puede usarse hasta 3 veces
+Constancia movilistica: Aumenta en 1 su velocidad. Puede usarse hasta 3 veces
+Relajación: Alvariño base gana +5 en cansancio, Restaura 5 puntos de salud
+e ignora la mitad del daño que fuese a recibir en el siguiente turno. Cuesta 3 de maná.
+
+Explicación: 
+La idea del Alvariño base es que gana estadísticas base con constancia, ganando experiencia. Pero no tiene ningún truco especial, solo puede atacar o defenderse
+
+Alvariño Gallego:
+A Alvariño Gallego todo le parece mal. Cualquier debilidad de su oponente será explotada. El Alvariño Gallego tiene un gran poder ofensivo físico pero poca defensa. Sin embargo, 
+el Alvariño Gallego tiene una gran velocidad y puede usarla en sus habilidades especiales, que les permite evadir los ataques enemigos.
+
+Estadísticas base: 
+Ataque: 20
+Magia: 0
+Vida: 60
+Defensa física: 12
+Defensa mágica: 6
+Velocidad: 20
+Maná: 1
+Maná máximo: 3
+Cansancio: 8
+
+Habilidades pasivas:
+El Alvariño gallego puede aumentar su ataque por encima del límite superior (20)
+
+Habilidades:
+Golpe doble: El Alvariño gallego realiza dos ataques. Cuesta 1 cansancio extra y 2 de maná. El segundo golpe inflige (Daño*1.5) Tiene 1 turno 
+de enfriamiento.
+Aumentar ataque: El alvariño gallego se calienta y gana +1 punto de ataque permanente. Cuesta 2 de maná. 
+Evasividad: hasta el final del siguiente turno, el Alvariño gallego evita un (velocidad*2)% del daño que fuese a recibir hasta el próximo turno. 
+Cuesta 3 de maná 
+Velocista: Hasta el final de tu próximo turno, tu velocidad pasa a ser 50. Además, durante el resto de la partida, tus ataques físicos infligen 
+(Daño+Velocidad/4) 
+Restaurar energía: El Alvariño gallego restaura 4 de energía. Cuesta 2 de maná.
+
+Alvariño Gato:
+El Alvariño Gato: Se hace más fuerte cuando duerme pero tiene instintos felinos que le salvan de la muerte
+
+Estadísticas base: 
+Ataque: 1
+Magia: 0
+Vida: 105
+Defensa física: 8
+Defensa mágica: 1
+Velocidad: 16
+Maná: 0
+Maná máximo: 5
+Cansancio: 7
+
+Habilidades pasivas: 
+Cuando muere, en su lugar se queda a 1 punto de vida. Este efecto puede ocurrir hasta 6 veces. 
+Cada vez que el Alvariño Gato duerme o muere, Potencia  su ataque y su defensa mágica
+El Alvariño Gato
+Habilidades:
+Dormir: Potencia El ataque y su defensa mágica. Maná 1
+Erizar la cola: El Alvariño gato se coloca en posición felina, lo que suma su velocidad a su defensa y su defensa mágica hasta el final del
+próximo turno. Si mitiga todo el daño que se le fuese a hacer mientras está en posición felina, inflige (Daño) a su oponente. Maná 3
+Hacerse el muerto: El Alvariño gato finge su muerte. Al final del turno, obtiene las bonificaciones que obtendría si hubiese muerto. 
+Si ha recibido daño, además, muere pero vuelve a la vida con sus puntos de vida actuales. Maná 2
+intimidar:
+Tomar leche: 
+
+Alvariños artísticos:
+Alvariño músico:
+El Alvariño músico dispone de varias formas musicales que le confieren distintas bonificaciones hasta que cambie de forma. 
+Estadísticas base: 
+Ataque: 10
+Magia: 10
+Vida: 225
+Defensa física: 10
+Defensa mágica: 10
+Velocidad: 10
+Maná: 0
+Maná máximo: 0
+Cansancio: 10
+Habilidades pasivas: 
+Siempre que el Alvariño músico cambia de forma, mantiene las bonificaciones de la forma anterior durante ese y su siguiente turno.
+Habilidades: 
+Forma piano: El Alvariño músico se relaja, lo que le confiere el máximo de defensa y defensa mágica. Además, siempre que
+mitigue daño, devuelve esa misma cantidad de daño mitigado. Además, recibir daño no le cansa.
+Forma viola: El Alvariño músico se vuelve preciso, lo que le confiere el ataque y magia al máximo. Cada ataque inflige (Magia/2) de daño
+físico adicional
+Forma Flauta: El Alvariño músico se vuelve ligero como el aire, lo que le confiere una velocidad máxima. Además, cada ataque 
+inflige (Velocidad/2) daño físico adicional. 
+Alvariño Guitarra eléctrica: El Alvariño músico se vuelve eléctrico, que hace que cada ataque inflige (Magia) de daño adicional
+Alvariño Batería: Mientras se encuentra en este estado, el Alvariño músico obtiene +5 a Ataque, Magia, Defensa física, Defensa mágica y 
+velocidad y restaura 5 puntos de salud al comienzo de cada turno.
+
+Alvariño Kawai:
+El Alvariño Kawai aturde con su encanto, y aleja a sus rivales de él lo que le confiere la capacidad de evitar los ataques enemigos.
+Estadísticas base: 
+Ataque: 5
+Magia: 5
+Vida: 225
+Defensa física: 5
+Defensa mágica: 12
+Velocidad: 14
+Maná: 2
+Maná máximo: 6
+Cansancio: 5
+
+Habilidades pasivas: 
+El Alvariño Kawai no puede sufrir daño en los turnos pares. 
+El Alvariño Kawai hace daño mágico al atacar. 
+
+Habilidades:
+Sonrisa: El Alvariño Kawai aturde a su oponente, que no puede realizar ninguna acción este turno. (Mana 4)
+Hacer el tonto: El Alvariño Kawai no puede recibir daño este turno (Mana 4)
+Abrazo: El Alvariño Kawai deja conmocionado a su rival. Cualquier daño que fuese a recibir el Alvariño Kawai este turno, lo recibe el
+Alvariño atacante en su lugar. (Mana 6)
+Beso: El Alvariño Kawai inflige a su enemigo un 10% de su vida y se cura el daño infligido. (Mana 6)
+Imitación penosa: El Alvariño Kawai cambia su pasiva para no sufrir daño en los turnos impares. Vuelve a lanzarla para no sufrir daño
+en los turnos pares (Mana 2). 
+
+Alvariño Yihadista:
+El Alvariño Yihadista realiza poderosos ataques, a cambio de su propia seguridad, claro está. 
+
+Estadísticas base: 
+Ataque: 12
+Magia: 18
+Vida: 90
+Defensa física: 9
+Defensa mágica: 4
+Velocidad: 4
+Maná: 9999
+Maná máximo: 9999
+Cansancio: 9999
+Habilidades pasivas: 
+Siempre que el Alvariño Yihadista hace daño, se cura 5 puntos de salud. 
+El Alvariño yihadista es incansable y no tiene maná
+El Alvariño Yihadista hace siempre daño físico. 
+
+Habilidades:
+Decir algo hiriente: El Alvariño Yihadista inflige 1 de daño a su oponente este y los dos siguientes turnos (5 vida)
+Plantar una bomba: El Alvariño Yihadista inflige (Daño)+(Magia) a su oponente (15 vida)
+Arruinar un cumpleaños: El Alvariño Yihadista inflige ((Daño)+(Magia))*2 a su oponente. Este daño no puede ser prevenido ni mitigado 
+(Cuesta 30 vida)
+Oración: El próximo ataque hace el doble de daño (45 vida)
+Cambiar equipamiento: Durante el resto de la partida, el Alvariño Yihadista hace daño mágico. Puede volver a activarse para cambiar a daño
+físico (15 vida)
+
+
+Alvariños técnicos: 
+
+Alvariño Programador:
+El Alvariño programador puede decidir el destino de sus oponentes. 
+
+Estadísticas base: 
+Ataque: 2
+Magia: 16
+Vida: 150
+Defensa física: 3
+Defensa mágica: 12
+Velocidad: 1
+Maná: 2
+Maná máximo: 10
+Cansancio: 8
+
+Habilidades pasivas: 
+El Alvariño programador siempre decide qué hacer después de su oponente. Esta habilidad pierde su efecto si hay dos programadores en la partida
+
+Habilidades: 
+Practicar: El Alvariño Programador gana +1 velocidad permanente (maná 1)
+if: El Alvariño Programador mitiga un 100% de daño este turno y gana +1 velocidad permanente (maná 2)
+bucle: El Alvariño Programador Restaura 20 puntos de salud y gana +1 velocidad permanente (maná 3)
+Array: El Alvariño Programador almacena la habilidad usada por su oponente, que puede usar durante el resto de la partida
+Si el oponente realizó un ataque físico, en su lugar gana +1 de ataque permanente. (maná 7)
+Objeto: El Alvariño Programador gana +3 velocidad permanente (maná 5)
+
+Alvariño Código:
+El Alvariño código puede decidir las acciones rivales y tiene una gran capacidad de resistir ataques e infligirlos, además de muy buen ataque 
+y velocidad, pero la memoria es frágil. 
+Estadísticas base: 
+Ataque: 17
+Magia: 11
+Vida: 60
+Defensa física: 15
+Defensa mágica: 18
+Velocidad: 19
+Maná: 2
+Maná máximo: 10
+Cansancio: 9999
+
+Habilidades pasivas: 
+El Alvariño código decide que acción hará el oponente en cada turno múltiplo de 5
+El Alvariño código no se cansa
+Habilidades: 
+Etéreo: Hasta el final del siguiente turno, el Alvariño Código se inmaterializa volviendose inalcanzable (Coste 0, 5 enfriamiento)
+Aplicación: Alvariño gana 3 de maná este turno, gana 2 si ha recibido daño (Coste0, 3 enfriamiento)
+LOVE: Alvariño gasta todo su maná para infligir (Maná*Magia+Ataque) Daño mágico
+CODETERMINACIÓN: Alvariño gasta todo su maná para obtener un escudo permamente de (Magia*Maná/2.5)
+Spyware: Tu oponente se siente inseguro de que puedas espiarlo, lo que le obliga a repetir la acción de este turno durante los dos siguientes turnos (3 de maná)
+
+Alvariño Deidad:
+El Alvariño deidad tiene altas resistencias y puede curarse, y causa daño pasivamente simplemente por estar en juego
+Estadísticas base: 
+Ataque: 1
+Magia: 19
+Vida: 300
+Defensa física: 18
+Defensa mágica: 11
+Velocidad: 4
+Maná: 5
+Maná máximo: 8
+Cansancio: 9999
+Habiliades pasivas: 
+El Alvariño deidad inflige (Ataque) de daño al oponente cada turno
