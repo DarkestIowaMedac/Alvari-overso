@@ -56,61 +56,61 @@ public class Alvariño {
         
     }
     public double getAtaque() {
-        return ataque;
+        return this.ataque;
     }
     public void setAtaque(double ataque) {
         this.ataque = ataque;
     }
     public double getMagia() {
-        return magia;
+        return this.magia;
     }
     public void setMagia(double magia) {
         this.magia = magia;
     }
     public double getVida() {
-        return vida;
+        return this.vida;
     }
     public void setVida(double vida) {
         this.vida = vida;
     }
     public double getDef_fis() {
-        return def_fis;
+        return this.def_fis;
     }
     public void setDef_fis(double def_fis) {
         this.def_fis = def_fis;
     }
     public double getDef_mag() {
-        return def_mag;
+        return this.def_mag;
     }
     public void setDef_mag(double def_mag) {
         this.def_mag = def_mag;
     }
     public double getEscudo() {
-        return escudo;
+        return this.escudo;
     }
     public void setEscudo(double escudo) {
         this.escudo = escudo;
     }
     public double getVelocidad() {
-        return velocidad;
+        return this.velocidad;
     }
     public void setVelocidad(double velocidad) {
         this.velocidad = velocidad;
     }
     public double getMana() {
-        return mana;
+        return this.mana;
     }
     public void setMana(double mana) {
         this.mana = mana;
     }
     public double getMaxmana() {
-        return maxmana;
+        return this.maxmana;
     }
     public void setMaxmana(double maxmana) {
         this.maxmana = maxmana;
     }
     public double getEnergia() {
-        return energia;
+        return this.energia;
     }
     public void setEnergia(double energia) {
         this.energia = energia;
