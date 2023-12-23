@@ -1,20 +1,20 @@
 public class Alvariño {
-    double ataque;
-    double magia;
-    double vida;
-    double def_fis;
-    double def_mag;
-    double escudo;
-    double velocidad;
-    double mana;
-    double maxmana;
-    double energia;
-    int idhabilidadpasiva;
-    int idhabilidad1;
-    int idhabilidad2;
-    int idhabilidad3;
-    int idhabilidad4;
-    int idhabilidad5;
+    protected double ataque;
+    protected double magia;
+    protected double vida;
+    protected double def_fis;
+    protected double def_mag;
+    protected double escudo;
+    protected double velocidad;
+    protected double mana;
+    protected double maxmana;
+    protected double energia;
+    protected int idhabilidadpasiva;
+    protected int idhabilidad1;
+    protected int idhabilidad2;
+    protected int idhabilidad3;
+    protected int idhabilidad4;
+    protected int idhabilidad5;
     
     public Alvariño() {
         this.ataque = 0;

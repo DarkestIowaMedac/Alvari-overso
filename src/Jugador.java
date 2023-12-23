@@ -1,9 +1,11 @@
 public class Jugador extends Alvariño {
-    boolean eligeprimero;
-    boolean mueveprimero;
-    int estado; // 0 aturdido, 1 atacando, 2 bloqueando, 3 casteando una habilidad, 4 canalizando maná, 5 canalizando energía
-    int contadores_aturdimiento;
-    boolean haRecibidoDañoEsteTurno;
+    private boolean eligeprimero;
+    private boolean mueveprimero;
+    private int estado; // 0 aturdido, 1 atacando, 2 bloqueando, 3 casteando una habilidad, 4 canalizando maná, 5 canalizando energía
+    private int contadores_aturdimiento;
+    private boolean haRecibidoDañoEsteTurno;
+    private static int turno = 0;
+    
     public Jugador(boolean eligeprimero, boolean mueveprimero, int estado, int contadores_aturdimiento,
             boolean haRecibidoDañoEsteTurno) {
         this.eligeprimero = eligeprimero;
@@ -12,12 +14,38 @@ public class Jugador extends Alvariño {
         this.contadores_aturdimiento = contadores_aturdimiento;
         this.haRecibidoDañoEsteTurno = haRecibidoDañoEsteTurno;
     }
+
     public Jugador(double ataque, double magia, double vida, double def_fis, double def_mag, double escudo,
             double velocidad, double mana, double maxmana, double energia, int idhabilidadpasiva, int idhabilidad1, int idhabilidad2, 
             int idhabilidad3, int idhabilidad4, int idhabilidad5, boolean eligeprimero, boolean mueveprimero,
             int estado, int contadores_aturdimiento, boolean haRecibidoDañoEsteTurno) {
         super(ataque, magia, vida, def_fis, def_mag, escudo, velocidad, mana, maxmana, energia, idhabilidadpasiva, idhabilidad1, idhabilidad2, 
         idhabilidad3, idhabilidad4, idhabilidad5);
+        this.eligeprimero = eligeprimero;
+        this.mueveprimero = mueveprimero;
+        this.estado = estado;
+        this.contadores_aturdimiento = contadores_aturdimiento;
+        this.haRecibidoDañoEsteTurno = haRecibidoDañoEsteTurno;
+    }
+    public Jugador(Alvariño Alvariño, boolean eligeprimero, boolean mueveprimero,
+            int estado, int contadores_aturdimiento, boolean haRecibidoDañoEsteTurno) {
+        this.ataque = Alvariño.ataque;
+        this.magia = Alvariño.magia;
+        this.vida = Alvariño.vida;
+        this.def_fis = Alvariño.def_fis;
+        this.def_mag = Alvariño.def_mag;
+        this.escudo = Alvariño.escudo;
+        this.velocidad = Alvariño.velocidad;
+        this.mana = Alvariño.mana;
+        this.maxmana = Alvariño.maxmana;
+        this.energia = Alvariño.energia;
+        this.idhabilidadpasiva = Alvariño.idhabilidadpasiva;
+        this.idhabilidad1 = Alvariño.idhabilidad1;
+        this.idhabilidad2 = Alvariño.idhabilidad2;
+        this.idhabilidad3 = Alvariño.idhabilidad3;
+        this.idhabilidad4 = Alvariño.idhabilidad4;
+        this.idhabilidad5 = Alvariño.idhabilidad5;
+    
         this.eligeprimero = eligeprimero;
         this.mueveprimero = mueveprimero;
         this.estado = estado;
@@ -54,7 +82,12 @@ public class Jugador extends Alvariño {
     public void setHaRecibidoDañoEsteTurno(boolean haRecibidoDañoEsteTurno) {
         this.haRecibidoDañoEsteTurno = haRecibidoDañoEsteTurno;
     }
-
+    public static int getTurno() {
+        return turno;
+    }
+    public static void setTurno(int turno) {
+        Jugador.turno = turno;
+    }
 
     public void atacar(double ataque, boolean haRecibidoDañoEsteTurno, Jugador querecibeeldaño) {
         this.estado = 1;
@@ -65,12 +98,7 @@ public class Jugador extends Alvariño {
         }
         if (this.energia > 0){
         if(this.haRecibidoDañoEsteTurno == true){
-            if(querecibeeldaño.getEstado() == 2){
-                querecibeeldaño.setVida(querecibeeldaño.getVida()- (calculo_de_daño/2));
-            }
-            else{
             querecibeeldaño.setVida(querecibeeldaño.getVida()-((this.ataque/2)));
-            }
         }
         else{
             if(querecibeeldaño.getEstado() == 2){
@@ -84,7 +112,7 @@ public class Jugador extends Alvariño {
         querecibeeldaño.setHaRecibidoDañoEsteTurno(true);
     }
 }
-    public void bloquear(double def_fis, boolean mueveprimero, Jugador queataca) {
+    public void bloquear() {
         this.estado = 2;
     }
     
@@ -118,7 +146,31 @@ public class Jugador extends Alvariño {
         this.energia++;
     }
     public void findeturnoreset (){
-        this.haRecibidoDañoEsteTurno == false;
+        this.haRecibidoDañoEsteTurno = false;
+    }
+    public void principioturnoj1actuaprimero (Jugador j2){
+        double probabilidad = (this.velocidad/(this.velocidad+j2.getVelocidad()))*100; 
+        double numero = (Math.random() * 100);
+        if (numero > (100-probabilidad)){
+            this.mueveprimero = true;
+            j2.mueveprimero = false;
+        }
+        else{
+            this.mueveprimero = false;
+            j2.mueveprimero = true;
+        }
+    }
+    public void principioturnoj1mueveprimero (Jugador j2){
+        if (turno%2 == 1){
+            this.eligeprimero = true;
+            j2.eligeprimero = false;
+        }
+        else{
+            this.eligeprimero = false;
+            j2.eligeprimero = true;
+        }
+    }   
+    public void finturnoavanzarturno (Jugador j2){
+        turno++;
     }
 }
-

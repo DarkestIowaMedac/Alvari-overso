@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
         Alvariño Alvariños[] = new Alvariño [9];
@@ -19,7 +21,34 @@ public class App {
         999, 42, 43, 44, 45, 46, 47);
         Alvariños [8] = new Alvariño(1, 19, 300, 18, 11, 0, 4, 5, 8, 
         999, 0, 1, 2, 3, 4, 5);
-       
+        Scanner lectura = new Scanner (System.in);
+        int eligeatualvariño;
+        int eligej1oj2 = 1;
+        do{
+        do{ 
+            System.out.println("Jugador "+ eligej1oj2+" elige tu Alvariño: ");
+            System.out.println("0. Alvariño Base");
+            System.out.println("1. Alvariño Gallego");
+            System.out.println("2. Alvariño Gato");
+            System.out.println("3. Alvariño Artístico");
+            System.out.println("4. Alvariño Kawai");
+            System.out.println("5. Alvariño Yihadista");
+            System.out.println("6. Alvariño Programador");
+            System.out.println("7. Alvariño Código");
+            System.out.println("8. Alvariño Deidad");
+            eligeatualvariño = lectura.nextInt();
+            if ((eligeatualvariño >= 0 || eligeatualvariño <= 8) && eligej1oj2 == 1){
+                Jugador j1 = new Jugador(Alvariños[eligeatualvariño], false, false, 0, 
+                0, false);
+                eligej1oj2++;
+            }
+            else if(eligeatualvariño >= 0 || eligeatualvariño <= 8){
+                Jugador j2 = new Jugador(Alvariños[eligeatualvariño], false, false, 0, 
+                0, false); 
+                eligej1oj2++;
+            }
+        }while(eligeatualvariño < 0 || eligeatualvariño > 8);
+        }while(eligej1oj2 < 3);
         
     }
 }
