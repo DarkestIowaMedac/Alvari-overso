@@ -21,9 +21,13 @@ public class App {
         999, 42, 43, 44, 45, 46, 47);
         Alvariños [8] = new Alvariño(1, 19, 300, 18, 11, 0, 4, 5, 8, 
         999, 0, 1, 2, 3, 4, 5);
+          Jugador j1 = null;
+          Jugador j2 = null;
         Scanner lectura = new Scanner (System.in);
         int eligeatualvariño;
         int eligej1oj2 = 1;
+        int j1accion;
+        int j2accion;
         do{
         do{ 
             System.out.println("Jugador "+ eligej1oj2+" elige tu Alvariño: ");
@@ -38,17 +42,26 @@ public class App {
             System.out.println("8. Alvariño Deidad");
             eligeatualvariño = lectura.nextInt();
             if ((eligeatualvariño >= 0 || eligeatualvariño <= 8) && eligej1oj2 == 1){
-                Jugador j1 = new Jugador(Alvariños[eligeatualvariño], false, false, 0, 
+                j1 = new Jugador(Alvariños[eligeatualvariño], false, false, 0, 
                 0, false);
                 eligej1oj2++;
             }
             else if(eligeatualvariño >= 0 || eligeatualvariño <= 8){
-                Jugador j2 = new Jugador(Alvariños[eligeatualvariño], false, false, 0, 
+                j2 = new Jugador(Alvariños[eligeatualvariño], false, false, 0, 
                 0, false); 
                 eligej1oj2++;
             }
         }while(eligeatualvariño < 0 || eligeatualvariño > 8);
         }while(eligej1oj2 < 3);
+        do{
+            System.out.println("Jugador 1, ¿qué harás?");
+            System.out.println("1. Atacar");
+            System.out.println("2. Bloquear");
+            System.out.println("3. Lanzar una habilidad");
+            System.out.println("4. Canalizar maná");
+            System.out.println("5. Canalizar energía");
+        }while(true);
         
-    }
+   
+}
 }

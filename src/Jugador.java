@@ -88,6 +88,10 @@ public class Jugador extends Alvariño {
     public static void setTurno(int turno) {
         Jugador.turno = turno;
     }
+    @Override
+    public String toString (){
+        return ""+this.vida;
+    }
 
     public void atacar(double ataque, boolean haRecibidoDañoEsteTurno, Jugador querecibeeldaño) {
         this.estado = 1;
