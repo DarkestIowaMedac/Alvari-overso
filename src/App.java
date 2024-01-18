@@ -51,6 +51,7 @@ public class App {
                 0, false); 
                 eligej1oj2++;
             }
+        System.out.println(j1);
         }while(eligeatualvariño < 0 || eligeatualvariño > 8);
         }while(eligej1oj2 < 3);
         do{
